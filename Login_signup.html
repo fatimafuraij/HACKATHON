@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+<html  >
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+</head>
+<body>
+   
+    <!--____________Main content____________-->
+    <div class="sl-container">
+        <div class="wrapper">
+            <div class=" title-text">
+                <div class="title login">Login Form</div>
+                <div class="title signup">Signup Form</div>
+            </div>
+
+            <div class="form-container">
+                <div class="slide-controler">
+                    <input type="radio" name="slider" id="login" checked />
+                    <input type="radio" name="slider" id="signup" />
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">Signup</label>
+                    <div class="slide-tab"></div>
+                </div>
+                <div class="form-inner">
+
+
+
+
+                    <form action="Login.php" class="login" method="post">
+                        <div class="field">
+                            <input type="email" name="Lemail" placeholder="Email Address" required />
+                        </div>
+                        <div class="field">
+                            <input type="password" name="Lpassword" placeholder="Password" required />
+                        </div>
+                        <div class="pass-link"> <a href="#">Forgot password?</a></div>
+                        <div class="field">
+                            <input type="submit" value="Login" />
+                        </div>
+                        <div class="signup-link">Not a member?<a href="#"> Signup now</a> </div>
+                    </form>
+
+
+
+                    <form action="signup.php" class="signup" method="post">
+                        <div class="field">
+                            <input type="email" name="email" placeholder="Email Address" required />
+                        </div>
+                        <div class="field">
+                            <input type="text" name="Fname" placeholder="First name" required />
+                        </div>
+                        <div class="field">
+                            <input type="text" name="Lname" placeholder="Last name" required />
+                        </div>
+                        <div class="field">
+                            <input type="tel" name="tel" placeholder="Phone number" required />
+                        </div>
+                        <div class="field">
+                            <input type="password" name="pass1" placeholder="Password" required />
+                        </div>
+                        <div class="field">
+                            <input type="password" name="pass2" placeholder="Confirm Password" required />
+                        </div>
+                     
+                        <div class="field">
+                            <input type="submit" value="Signup" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <!--__________Footer__________-->
+    <div class="footer">
+        <div class="head-container">
+            <div class="row">
+               
+               
+                     <div class="card-single">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28569.1104266536!2d50.02
+                        0587099070305!3d26.483475355424503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e3600
+                                     338a950997%3A0x6fa97b0d810360cd!2z2K3Yr9mK2YLYqSDYp9mE2K3ZitmI2KfZhg!5e0!3m2!1s
+                                     r!2ssa!4v1615626745020!5m2!1sar!2ssa" width="550" height="500" style="border:0;" 
+                                allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                <div class="footer-col4">
+                    <ul>
+                                         <div class="card-single-contact">
+                        <h1>Our Store</h1>
+                        <p>
+                            P.O. Box 79800, Dammam 31952
+                            Kingdom of Saudi Arabia
+                        </p>
+
+                        <p><a href="tel:+966500000000"><i class="fa fa-phone-square"> +966 5X-XXX-XXXX</i></a></p>
+                        <p><a href="mailto:MAR@gmail.com"><i class="fa fa-envelope-o"> MAR@gmail.com</i></a></p>
+                    </div>
+                    </ul>
+
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                         <li><img style="width: 38px" src="Images/sxx.jpg"><a href="">Facebook</a></li>
+                        <li><img style="width: 30px" src="Images/Twi.png"><a href="">Twitter</a></li>
+                        <li><img style="width: 35px" src="Images/is.png"><a href="">Instagram</a></li>
+                        <li><img style="width: 35px" src="Images/you.png"><a href="">Youtube</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.querySelector("form.login");
+        const SignupForm = document.querySelector("form.signup");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const SignupLink = document.querySelector(".signup-link a");
+        const Logintxt = document.querySelector(".title-text .login");
+        const Signuptxt = document.querySelector(".title-text .signup");
+        signupBtn.onclick = (() => {
+            loginForm.style.marginLeft = "-50%";
+            Logintxt.style.marginLeft = "-150%";
+        });
+        loginBtn.onclick = (() => {
+            loginForm.style.marginLeft = "0%";
+            Logintxt.style.marginLeft = "0%";
+        });
+        SignupLink.onclick = (() => {
+            signupBtn.click();
+            return false;
+        });
+    </script>
+
+
+
+</body>
+</html>
